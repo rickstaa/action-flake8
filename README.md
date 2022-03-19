@@ -50,32 +50,36 @@ See the Inputs section below for details on the defaults and optional configurat
 
 **Optional**. The directory to run flake8 in. Defaults to `.`.
 
-#### `flake8_args`
+### `python_executable`
+
+The name or location of the python executable you want to use. Defaults to `python`.
+
+### `flake8_args`
 
 **Optional**. Command-line arguments to the flake8 executable. Defaults to `""`.
 
 Please note that some command-line arguments can be defined with other fields in your configuration.  You may combine the `args` setting with the other settings below, or use `args` to configure flake8 without the other Action settings.
 
-#### `level`
+### `level`
 
 **Optional**. The log level of the reviewdog reporter. Options: `[info, warning, error]`. Defaults to `error`.
 
-#### `reporter`
+### `reporter`
 
 **Optional**. Reporter of reviewdog command `[github-pr-check, github-pr-review, github-check]`. Defaults to `github-pr-check`.
 
-#### `filter_mode`
+### `filter_mode`
 
 **Optional**. Filtering mode for the reviewdog command `[added, diff_context, file, nofilter]`. Defaults to `added`.
 
-#### `fail_on_error`
+### `fail_on_error`
 
 **Optional**. Exit code for reviewdog when errors are found `[true, false]`. Defaults to `false`.
 
-#### `reviewdog_flags`
+### `reviewdog_flags`
 
 **Optional**. Additional reviewdog flags. Defaults to `""`.
 
-#### `tool_name`
+### `tool_name`
 
 **Optional**. Tool name to use for reviewdog reporter. Defaults to `flake8`.

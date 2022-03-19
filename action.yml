@@ -6,6 +6,10 @@ inputs:
     description: "Working directory relative to the root directory."
     required: false
     default: "."
+  python_executable:
+    description: "Python executable."
+    required: false
+    default: "python"
   flake8_args:
     description: "Additional flake8 arguments."
     required: false
@@ -46,6 +50,7 @@ runs:
       shell: bash
       env:
         INPUT_WORKDIR: ${{ inputs.workdir }}
+        INPUT_PYTHON_EXECUTABLE: ${{ inputs.python_executable }}
         INPUT_FLAKE8_ARGS: ${{ inputs.flake8_Args }}
         INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
         INPUT_TOOL_NAME: ${{ inputs.tool_name }}

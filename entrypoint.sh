@@ -10,11 +10,16 @@ export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 export REVIEWDOG_VERSION=v0.14.0
 
 echo "[action-flake8] Installing reviewdog..."
-wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b /tmp "${REVIEWDOG_VERSION}"
+wget -qO - https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b /tmp "${REVIEWDOG_VERSION}"
+
+if [[ "$(which pip)" == "" ]]; then
+  echo "[action-flake8] Installing pip package..."
+  wget -qO - https://bootstrap.pypa.io/get-pip.py | ${INPUT_PYTHON_EXECUTABLE}
+fi
 
 if [[ "$(which flake8)" == "" ]]; then
   echo "[action-flake8] Installing flake8 package..."
-  python -m pip install --upgrade flake8
+  ${INPUT_PYTHON_EXECUTABLE} -m pip install --upgrade flake8
 fi
 echo "[action-flake8] Flake8 version:"
 flake8 --version
