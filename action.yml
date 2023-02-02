@@ -10,6 +10,10 @@ inputs:
     description: "Additional flake8 arguments."
     required: false
     default: ""
+  flake8_extensions:
+    description: "The `pypi` package names of any flake8 extensions to install."
+    required: false
+    default: ""
   # Reviewdog related inputs
   github_token:
     description: "GITHUB_TOKEN."

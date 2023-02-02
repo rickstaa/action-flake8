@@ -56,6 +56,12 @@ See the Inputs section below for details on the defaults and optional configurat
 
 Please note that some command-line arguments can be defined with other fields in your configuration.  You may combine the `args` setting with the other settings below, or use `args` to configure flake8 without the other Action settings.
 
+#### `flake8_extensions`
+
+**Optional**. Any additional `flake8` extensions to install. Defaults to `""`.
+
+These are simply `pypi` package names as a space-separated list, e.g. `flake8-docstrings flake8-simplify flake8-unused-arguments flake8-quotes`.
+
 #### `level`
 
 **Optional**. The log level of the reviewdog reporter. Options: `[info, warning, error]`. Defaults to `error`.

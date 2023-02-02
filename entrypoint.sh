@@ -19,6 +19,11 @@ fi
 echo "[action-flake8] Flake8 version:"
 flake8 --version
 
+if [[ "${INPUT_FLAKE8_EXTENSIONS}" != "" ]]; then
+  echo "[action-flake8] Installing requested flake8 extensions..."
+  python -m pip install --upgrade ${INPUT_FLAKE8_EXTENSIONS}
+fi
+
 echo "[action-flake8] Checking python code with the flake8 linter and reviewdog..."
 exit_val="0"
 flake8 . ${INPUT_FLAKE8_ARGS} 2>&1 | # Removes ansi codes see https://github.com/reviewdog/errorformat/issues/51
