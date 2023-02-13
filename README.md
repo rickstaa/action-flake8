@@ -32,6 +32,10 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: "3.8"
+      # Install specific flake8 version (this step is not required. Default is "latest").
+      - run: pip install flake8==6.0.0
+      # Install flake8 extensions (this step is not required. Default is "None").
+      - run: pip install flake8-docstrings flake8-simplify flake8-unused-arguments flake8-quotes
       - name: flake8 Lint
         uses: reviewdog/action-flake8@v3
         with:
