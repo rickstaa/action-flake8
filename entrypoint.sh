@@ -22,7 +22,7 @@ flake8 --version
 echo "[action-flake8] Checking python code with the flake8 linter and reviewdog..."
 exit_val="0"
 flake8 . ${INPUT_FLAKE8_ARGS} 2>&1 | # Removes ansi codes see https://github.com/reviewdog/errorformat/issues/51
-  /tmp/reviewdog -f=flake8 \
+  /tmp/reviewdog -f="${INPUT_ERROR_FORMAT}" \
     -name="${INPUT_TOOL_NAME}" \
     -reporter="${INPUT_REPORTER}" \
     -filter-mode="${INPUT_FILTER_MODE}" \
