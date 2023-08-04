@@ -53,6 +53,7 @@ runs:
         INPUT_FLAKE8_ARGS: ${{ inputs.flake8_Args }}
         INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
         INPUT_TOOL_NAME: ${{ inputs.tool_name }}
+        INPUT_ERROR_FORMAT: ${{ inputs.error_format }}
         INPUT_LEVEL: ${{ inputs.level }}
         INPUT_REPORTER: ${{ inputs.reporter }}
         INPUT_FILTER_MODE: ${{ inputs.filter_mode }}
