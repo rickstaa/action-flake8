@@ -82,4 +82,8 @@ Please note that some command-line arguments can be defined with other fields in
 
 #### `tool_name`
 
-**Optional**. Tool name to use for reviewdog reporter. Defaults to `flake8`.
+**Optional**. Tool name to use for reviewdog reporter. Defaults to `flake8`..
+
+#### `error_format`
+
+**Optional**. Pre-defined error format `[flake8, pep8]`. Defaults to `flake8`.
