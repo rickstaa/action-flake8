@@ -19,6 +19,10 @@ inputs:
     description: "Tool name to use for reviewdog reporter."
     required: false
     default: "flake8"
+  error_format:
+    description: "Pre-defined error format [flake8, pep8]"
+    required: false
+    default: "flake8"
   level:
     description: "Report level for reviewdog [info, warning, error]."
     required: false
