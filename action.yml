@@ -19,6 +19,10 @@ inputs:
     description: "Tool name to use for reviewdog reporter."
     required: false
     default: "flake8"
+  error_format:
+    description: "Pre-defined error format [flake8, pep8]"
+    required: false
+    default: "flake8"
   level:
     description: "Report level for reviewdog [info, warning, error]."
     required: false
@@ -49,6 +53,7 @@ runs:
         INPUT_FLAKE8_ARGS: ${{ inputs.flake8_Args }}
         INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
         INPUT_TOOL_NAME: ${{ inputs.tool_name }}
+        INPUT_ERROR_FORMAT: ${{ inputs.error_format }}
         INPUT_LEVEL: ${{ inputs.level }}
         INPUT_REPORTER: ${{ inputs.reporter }}
         INPUT_FILTER_MODE: ${{ inputs.filter_mode }}
