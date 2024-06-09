@@ -27,9 +27,9 @@ jobs:
     name: Lint
     steps:
       - name: Check out source repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Set up Python environment
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: "3.8"
       # Install specific flake8 version (this step is not required. Default is "latest").
