@@ -7,7 +7,7 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-export REVIEWDOG_VERSION=v0.17.5
+export REVIEWDOG_VERSION=v0.18.1
 
 echo "[action-flake8] Installing reviewdog..."
 wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b /tmp "${REVIEWDOG_VERSION}"
