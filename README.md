@@ -72,8 +72,15 @@ Please note that some command-line arguments can be defined with other fields in
 
 **Optional**. Filtering mode for the reviewdog command `[added, diff_context, file, nofilter]`. Defaults to `added`.
 
+### `fail_level`
+
+**Optional**. If set to `none`, always use exit code 0 for reviewdog. Otherwise, exit code 1 for reviewdog if it finds at least 1 issue with severity greater than or equal to the given level.
+Possible values: [`none`, `any`, `info`, `warning`, `error`]
+Default is `none`.
+
 #### `fail_on_error`
 
+Deprecated, use `fail_level` instead.
 **Optional**. Exit code for reviewdog when errors are found `[true, false]`. Defaults to `false`.
 
 #### `reviewdog_flags`
